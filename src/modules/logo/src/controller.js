@@ -14,7 +14,7 @@ export default class LogoController {
         this.html.appendChild(this.logo);
     }
 
-    changeColor(color = "#000000") {
+    setColor(color = "#000000") {
         this.logo.style.backgroundColor = color;
     }
 
