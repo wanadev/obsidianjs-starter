@@ -1,0 +1,3 @@
+[submodule "obsidian"]
+	path = src/vendors/obsidian
+	url = git@git.wanadev.org:obsidian/obsidian.git
