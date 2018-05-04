@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node server",
-    "dev": "webpack-dev-server --config ./config/webpack.config.dev.js",
+    "dev": "webpack-dev-server -d --config ./config/webpack.config.dev.js",
     "release": "NODE_ENV=production webpack --config ./config/webpack.config.release.js && cp -r server build/release && cp package.json build/release",
     "lint": "eslint src config server jast.js",
     "lint-fix": "eslint src config server jast.js --fix",

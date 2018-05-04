@@ -8,7 +8,7 @@ const DIST_DIR = path.resolve(ROOT_DIR, "build/dev");
 
 module.exports = merge(common, {
     mode: "development",
-    devtool: "eval",
+    devtool: "cheap-eval-source-map",
     output: {
         path: DIST_DIR,
         filename: "bundle.js",
