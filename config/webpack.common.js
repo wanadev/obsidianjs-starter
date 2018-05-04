@@ -2,6 +2,8 @@ const path = require("path");
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 const ROOT_DIR = path.resolve(__dirname, "../");
 
@@ -51,6 +53,18 @@ module.exports = {
                 context: "src/modules",
             },
         ]),
+        new HtmlWebpackPlugin({
+            template: "src/index.html",
+            inject: true,
+            sourceMap: true,
+            chunksSortMode: "dependency",
+        }),
+        new FaviconsWebpackPlugin({
+            logo: "./src/assets/favicon.svg",
+            icons: {
+                appleStartup: false,
+            },
+        }),
     ],
     devtool: "cheap-source-map",
 };

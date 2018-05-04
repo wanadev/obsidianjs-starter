@@ -2,7 +2,6 @@ const webpack = require("webpack");
 const merge = require("webpack-merge");
 const path = require("path");
 
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const UglifyJsWebpackPlugin = require("uglifyjs-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
@@ -44,12 +43,6 @@ module.exports = merge(common, {
         ],
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: "src/index.html",
-            inject: true,
-            sourceMap: true,
-            chunksSortMode: "dependency",
-        }),
         new ProgressBarWebpackPlugin({
             clear: false,
         }),

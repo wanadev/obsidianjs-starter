@@ -1,8 +1,6 @@
 const merge = require("webpack-merge");
 const path = require("path");
 
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
 const common = require("./webpack.common.js");
 
 const ROOT_DIR = path.resolve(__dirname, "../");
@@ -15,14 +13,6 @@ module.exports = merge(common, {
         path: DIST_DIR,
         filename: "bundle.js",
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: "src/index.html",
-            inject: true,
-            sourceMap: true,
-            chunksSortMode: "dependency",
-        }),
-    ],
     devServer: {
         host: "localhost",
         port: 8080,

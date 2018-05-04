@@ -20,7 +20,7 @@ export default class DemoModule {
         container.className = "demo-module";
 
         const logo = document.createElement("img");
-        logo.src = "/assets/modules/demo/images/logo.png";
+        logo.src = "/assets/modules/demo/images/logo.svg";
         logo.className = "obsidian-logo";
         container.appendChild(logo);
 
