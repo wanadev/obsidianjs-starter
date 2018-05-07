@@ -11,9 +11,7 @@ module.exports = {
     entry: {
         home: path.join(ROOT_DIR, "src/index.js"),
     },
-
     target: "web",
-
     module: {
         rules: [
             {
