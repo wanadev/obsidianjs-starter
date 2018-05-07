@@ -6,6 +6,7 @@ const UglifyJsWebpackPlugin = require("uglifyjs-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const ProgressBarWebpackPlugin = require("progress-bar-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 const common = require("./webpack.common.js");
 
@@ -54,6 +55,9 @@ module.exports = merge(common, {
             test: new RegExp("\\.(js|css)$"),
             threshold: 10240,
             minRatio: 0.8,
+        }),
+        new FaviconsWebpackPlugin({
+            logo: "./src/assets/favicon.svg",
         }),
     ],
 });
