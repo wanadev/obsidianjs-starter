@@ -57,5 +57,4 @@ module.exports = {
             chunksSortMode: "dependency",
         }),
     ],
-    devtool: "cheap-source-map",
 };
