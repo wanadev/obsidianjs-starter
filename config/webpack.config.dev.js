@@ -17,23 +17,6 @@ module.exports = merge(common, {
         path: DIST_DIR,
         filename: "bundle.js",
     },
-    module: {
-        rules: [
-            {
-                test: /\.(js|jsx)$/,
-                use: [
-                    {
-                        loader: "babel-loader",
-                        options: {
-                            cacheDirectory: true,
-                        },
-                    },
-                    "eslint-loader",
-                ],
-                exclude: /node_modules/,
-            },
-        ],
-    },
     plugins: [
         new FriendlyErrorsWebpackPlugin({
             compilationSuccessInfo: {

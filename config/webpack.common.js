@@ -15,9 +15,16 @@ module.exports = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                use: {
-                    loader: "babel-loader",
-                },
+                use: [
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            cacheDirectory: true,
+                        },
+                    },
+                    "eslint-loader",
+                ],
+                exclude: path.join(ROOT_DIR, "node_modules"),
             },
             {
                 test: /\.css$/,
