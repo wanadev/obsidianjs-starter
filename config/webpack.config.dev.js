@@ -21,7 +21,16 @@ module.exports = merge(common, {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                use: ["babel-loader", "eslint-loader"],
+                use: [
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            cacheDirectory: true,
+                        },
+                    },
+                    "eslint-loader",
+                ],
+                exclude: /node_modules/,
             },
         ],
     },

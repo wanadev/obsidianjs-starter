@@ -15,7 +15,7 @@ const BUILD_DIRNAME = "build/release";
 const DIST_DIR = path.resolve(ROOT_DIR, BUILD_DIRNAME);
 
 module.exports = merge(common, {
-    mode: "production", //
+    mode: "production",
     devtool: "source-map",
     target: "web",
     output: {
