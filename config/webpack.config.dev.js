@@ -2,6 +2,7 @@ const merge = require("webpack-merge");
 const path = require("path");
 
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
+const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 
 const common = require("./webpack.common.js");
 
@@ -21,10 +22,11 @@ module.exports = merge(common, {
         new FriendlyErrorsWebpackPlugin({
             compilationSuccessInfo: {
                 messages: [
-                    `Obsidian application is running on http://localhost:${PORT}`,
+                    `Obsidian development server is running at http://localhost:${PORT}`,
                 ],
             },
         }),
+        new HardSourceWebpackPlugin(),
     ],
     devServer: {
         host: "localhost",
