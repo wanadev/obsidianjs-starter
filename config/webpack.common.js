@@ -22,7 +22,6 @@ module.exports = {
                             cacheDirectory: true,
                         },
                     },
-                    "eslint-loader",
                 ],
                 exclude: path.join(ROOT_DIR, "node_modules"),
             },
