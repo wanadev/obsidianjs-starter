@@ -1,8 +1,0 @@
-{
-  "lerna": "2.9.0",
-  "packages": [
-    "obsidian",
-    "modules/*"
-  ],
-  "version": "0.0.0"
-}
