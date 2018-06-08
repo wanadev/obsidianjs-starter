@@ -8,7 +8,7 @@ import "./style/index.less";
 
 const app = obsidian("starter-app");
 
-app.load(logoModule);
-app.load(logoColorChangerModule);
+app.use(logoModule);
+app.use(logoColorChangerModule);
 
 app.start();
