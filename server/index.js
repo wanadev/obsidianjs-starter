@@ -11,5 +11,5 @@ if (TARGET === "dev") {
     app.use("/", express.static(APP_DIR));
 }
 
-console.log(`Starting Box Deluxe Static Server on 0.0.0.0:${PORT} [${TARGET}]`);
+console.log(`Starting Obsidian static server on 0.0.0.0:${PORT} [${TARGET}]`);
 app.listen(PORT);
