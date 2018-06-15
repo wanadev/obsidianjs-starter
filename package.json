@@ -7,8 +7,8 @@
     "start": "node server",
     "dev": "webpack-dev-server -d --config ./config/webpack.config.dev.js",
     "release": "NODE_ENV=production webpack --config ./config/webpack.config.release.js && cp -r server build/release && cp package.json build/release",
-    "lint": "eslint src config server jast.js",
-    "lint-fix": "eslint src config server jast.js --fix",
+    "lint": "eslint src config server",
+    "lint-fix": "eslint src config server --fix",
     "test": "echo \"tests: todo !\"",
     "precommit": "lint-staged"
   },
