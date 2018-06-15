@@ -1,4 +1,4 @@
-# box-deluxe
+# obsidian starter
 
 ## Usage
 
