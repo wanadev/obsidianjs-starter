@@ -1,5 +1,4 @@
-// obsidian is loaded from a submodule until is is published on npm
-import obsidian from "./vendors/obsidian/obsidian/src";
+import obsidian from "@obsidianjs/obsidian";
 
 import logoModule from "./modules/logo";
 import logoColorChangerModule from "./modules/logoColorChanger";
