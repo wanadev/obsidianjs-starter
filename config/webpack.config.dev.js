@@ -2,7 +2,7 @@ const merge = require("webpack-merge");
 const path = require("path");
 
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
-// const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
+const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 
 const common = require("./webpack.common.js");
 
@@ -26,9 +26,7 @@ module.exports = merge(common, {
                 ],
             },
         }),
-
-        // Disabled until css reload issue has been resolved (https://github.com/mzgoddard/hard-source-webpack-plugin/issues/301)
-        // new HardSourceWebpackPlugin(),
+        new HardSourceWebpackPlugin(),
     ],
     devServer: {
         host: "localhost",
