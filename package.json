@@ -18,7 +18,7 @@
       "git add"
     ]
   },
-  "repository": "git@git.wanadev.org:obsidian/starter.git",
+  "repository": "git@github.com:wanadev/obsidianjs-starter.git",
   "author": "wanadev",
   "license": "MIT",
   "devDependencies": {
