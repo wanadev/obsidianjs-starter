@@ -34,7 +34,8 @@
         "functions": "ignore"
       }
     ],
-    "no-param-reassign": ["error", { "props": false }]
+    "no-param-reassign": ["error", { "props": false }],
+    "global-require": "off"
   },
   "overrides": [
     {
