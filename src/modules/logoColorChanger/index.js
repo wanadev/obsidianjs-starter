@@ -2,9 +2,9 @@ export default {
     name: "logo-color-changer",
     requires: ["logo"],
     load() {
-        const Controller = require("./src/controller").default;
+        const LogoColorChangerController = require("./src/logoColorChangerController").default;
 
-        return new Controller();
+        return new LogoColorChangerController();
     },
     unload() {},
 };

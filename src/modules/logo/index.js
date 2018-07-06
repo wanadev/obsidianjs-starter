@@ -4,9 +4,9 @@ export default {
     name: "logo",
     requires: [],
     load() {
-        const Controller = require("./src/controller").default;
+        const LogoController = require("./src/logoController").default;
 
-        return new Controller();
+        return new LogoController();
     },
     unload() {},
 };
