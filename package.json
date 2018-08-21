@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server",
     "dev": "webpack-dev-server -d --config ./config/webpack.config.dev.js",
-    "release": "NODE_ENV=production webpack --config ./config/webpack.config.release.js && cp -r server build/release && cp package.json build/release",
+    "release": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.release.js && cp -r server build/release && cp package.json build/release",
     "lint": "eslint src config server",
     "lint-fix": "eslint src config server --fix",
     "test": "echo \"tests: todo !\"",
@@ -30,6 +30,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "compression-webpack-plugin": "^1.1.11",
     "copy-webpack-plugin": "^4.5.1",
+    "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
