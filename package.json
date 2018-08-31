@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node server",
-    "dev": "webpack-dev-server -d --config ./config/webpack.config.dev.js",
+    "dev": "cross-env NODE_ENV=dev node server",
     "release": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.release.js && cp -r server build/release && cp package.json build/release",
     "lint": "eslint src config server",
     "lint-fix": "eslint src config server --fix",
@@ -51,7 +51,7 @@
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.7",
-    "webpack-dev-server": "^3.1.5",
+    "webpack-dev-middleware": "^3.2.0",
     "webpack-glsl-loader": "^1.0.1",
     "webpack-merge": "^4.1.3"
   },

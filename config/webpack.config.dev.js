@@ -28,17 +28,4 @@ module.exports = merge(common, {
         }),
         new HardSourceWebpackPlugin(),
     ],
-    devServer: {
-        host: "localhost",
-        port: PORT,
-        quiet: true,
-        contentBase: path.join(DIST_DIR, "app"),
-        inline: true, // live reloading
-        stats: {
-            colors: true,
-            reasons: true,
-            chunks: false,
-            modules: false,
-        },
-    },
 });

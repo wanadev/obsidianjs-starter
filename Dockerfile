@@ -1,7 +1,7 @@
 FROM node:6
 
 ENV TARGET dev
-ENV PORT 3000
+ENV PORT 8080
 ENV APP_DIR /data/app
 
 COPY ./ /tmp
