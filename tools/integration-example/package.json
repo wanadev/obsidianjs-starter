@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start-obsidian-app": "npm run stop-obsidian-app && TARGET=dev PORT=3000 forever start ../../server/index.js &",
-    "stop-obsidian-app": "forever stop ../../server/index.js || true",
-    "dev": "npm run start-obsidian-app && webpack-dev-server -d --config ./webpack.config.js",
+    "start-integration-dev-server": "webpack-dev-server --port 8081 -d --config ./webpack.config.js",
+    "dev": "cross-env OBSIDIAN_APP_URL=\"http://localhost:8080\" npm run start-integration-dev-server",
     "build": "webpack --config ./webpack.config.js"
   },
   "devDependencies": {
     "babel-loader": "^7.1.4",
+    "cross-env": "^5.2.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.0",
     "webpack": "^4.8.1",
@@ -17,7 +17,6 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "forever": "^0.15.3",
     "obsidian-api": "^1.0.5"
   }
 }

@@ -4,7 +4,7 @@ import "./index.css";
 
 const app = obsidianApp({
     htmlNode: "#integration",
-    appUrl: "http://localhost:3000",
+    appUrl: process.env.OBSIDIAN_APP_URL,
 });
 
 console.log("App ready", app);
