@@ -50,7 +50,7 @@ module.exports = merge(common, {
         new CleanWebpackPlugin([BUILD_DIRNAME], { root: ROOT_DIR }),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new CompressionWebpackPlugin({
-            asset: "[path].gz[query]",
+            filename: "[path].gz[query]",
             algorithm: "gzip",
             test: new RegExp("\\.(js|css)$"),
             threshold: 10240,
