@@ -1,3 +1,4 @@
+import "@babel/polyfill";
 import obsidian from "@obsidianjs/obsidian";
 
 import logoModule from "./modules/logo";

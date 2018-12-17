@@ -27,6 +27,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.2.0",
     "@obsidianjs/obsidian": "^0.1.2",
     "autoprefixer": "^9.1.2",
