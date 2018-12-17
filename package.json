@@ -9,8 +9,12 @@
     "release": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.release.js && cp -r server build/release && cp package.json build/release",
     "lint": "eslint src config server",
     "lint-fix": "eslint src config server --fix",
-    "test": "echo \"tests: todo !\"",
-    "precommit": "lint-staged"
+    "test": "echo \"tests: todo !\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -21,7 +25,6 @@
   "repository": "git@github.com:wanadev/obsidianjs-starter.git",
   "author": "wanadev",
   "license": "MIT",
-
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.0",
