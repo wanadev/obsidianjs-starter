@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const merge = require("webpack-merge");
 const path = require("path");
 
-const UglifyJsWebpackPlugin = require("uglifyjs-webpack-plugin");
+const TerserWebpackPlugin = require("terser-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const ProgressBarWebpackPlugin = require("progress-bar-webpack-plugin");
@@ -36,7 +36,7 @@ module.exports = merge(common, {
             },
         },
         minimizer: [
-            new UglifyJsWebpackPlugin({
+            new TerserWebpackPlugin({
                 cache: true,
                 parallel: true,
                 sourceMap: true,
@@ -50,7 +50,7 @@ module.exports = merge(common, {
         new CleanWebpackPlugin([BUILD_DIRNAME], { root: ROOT_DIR }),
         new webpack.optimize.OccurrenceOrderPlugin(),
         new CompressionWebpackPlugin({
-            asset: "[path].gz[query]",
+            filename: "[path].gz[query]",
             algorithm: "gzip",
             test: new RegExp("\\.(js|css)$"),
             threshold: 10240,

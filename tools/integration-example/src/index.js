@@ -7,4 +7,9 @@ const app = obsidianApp({
     appUrl: process.env.OBSIDIAN_APP_URL,
 });
 
-console.log("App ready", app);
+
+window.app = app;
+
+app.on("ready", () => {
+    console.log("App ready", app);
+});
