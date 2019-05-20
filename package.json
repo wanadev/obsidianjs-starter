@@ -9,7 +9,8 @@
     "release": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.release.js && cp -r server build/release && cp package.json build/release",
     "lint": "eslint src config server",
     "lint-fix": "eslint src config server --fix",
-    "test": "echo \"tests: todo !\""
+    "test": "echo \"tests: todo !\"",
+    "plop": "plop"
   },
   "husky": {
     "hooks": {
@@ -50,6 +51,7 @@
     "license-webpack-plugin": "^2.0.4",
     "lint-staged": "^8.1.0",
     "mini-css-extract-plugin": "^0.5.0",
+    "plop": "^2.3.0",
     "postcss-loader": "^3.0.0",
     "progress-bar-webpack-plugin": "^1.11.0",
     "style-loader": "^0.23.1",
