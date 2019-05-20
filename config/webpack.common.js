@@ -65,6 +65,7 @@ module.exports = {
     ],
     resolve: {
         alias: {
+            modules: path.resolve("src/modules"),
             vendors: path.resolve("src/vendors"),
         },
     },
