@@ -46,6 +46,7 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.3",
+    "eslint-import-resolver-webpack": "^0.10.1",
     "favicons-webpack-plugin": "0.0.9",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "hard-source-webpack-plugin": "^0.13.1",
