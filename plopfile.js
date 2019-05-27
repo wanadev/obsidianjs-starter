@@ -46,21 +46,16 @@ module.exports = (plop) => {
                 path: `${defaultPath}/{{dashCase name}}/index.js`,
                 templateFile: "module-templates/index.template.js",
             }, {
-                // License
-                type: "add",
-                path: `${defaultPath}/{{dashCase name}}/LICENSE`,
-                templateFile: "module-templates/LICENSE",
-            }, {
                 // README
                 type: "add",
-                path: `${defaultPath}/{{dashCase name}}/README.rst`,
-                templateFile: "module-templates/README.template.rst",
-            }, {
+                path: `${defaultPath}/{{dashCase name}}/README.md`,
+                templateFile: "module-templates/README.template.md",
+            }, /* {
                 // Documentation
                 type: "add",
                 path: `${defaultPath}/{{dashCase name}}/doc/index.rst`,
                 templateFile: "module-templates/doc/index.template.rst",
-            }, {
+            }, */ {
                 type: "add",
                 path: `${defaultPath}/{{dashCase name}}/src/{{dashCase name}}.js`,
                 templateFile: "module-templates/src/module.template.js",

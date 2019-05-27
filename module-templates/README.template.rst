@@ -1,8 +1,0 @@
-{{dashCase name}}
-=============
-
-
-Documentation
--------------
-
-*

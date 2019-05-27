@@ -6,11 +6,16 @@
   "scripts": {
     "start": "node server",
     "dev": "cross-env NODE_ENV=dev node server",
+    "test": "jest --coverage --coverageDirectory=build/coverage",
+    "test-watch": "jest --watch",
+    "coverage": "npm test && opn build/coverage/lcov-report/index.html",
     "release": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.release.js && cp -r server build/release && cp package.json build/release",
     "lint": "eslint src config server",
     "lint-fix": "eslint src config server --fix",
-    "test": "echo \"tests: todo !\"",
     "plop": "plop"
+  },
+  "jest": {
+    "testPathIgnorePatterns": ["/node_modules/", "/module-templates/"]
   },
   "husky": {
     "hooks": {
@@ -27,42 +32,44 @@
   "author": "wanadev",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/polyfill": "^7.0.0",
-    "@babel/preset-env": "^7.2.0",
+    "@babel/core": "^7.4.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
     "@obsidianjs/obsidian": "^0.1.2",
-    "autoprefixer": "^9.1.2",
-    "babel-loader": "^8.0.4",
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^1.0.0",
     "compression-webpack-plugin": "^2.0.0",
     "copy-webpack-plugin": "^4.5.1",
     "cross-env": "^5.2.0",
-    "css-loader": "^2.0.1",
-    "eslint": "^5.4.0",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-import": "^2.17.3",
     "favicons-webpack-plugin": "0.0.9",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "hard-source-webpack-plugin": "^0.13.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.2.1",
+    "jest": "^24.8.0",
+    "jest-each": "^24.8.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
-    "license-webpack-plugin": "^2.0.4",
-    "lint-staged": "^8.1.0",
+    "license-webpack-plugin": "^2.1.1",
+    "lint-staged": "^8.1.7",
     "mini-css-extract-plugin": "^0.5.0",
     "plop": "^2.3.0",
     "postcss-loader": "^3.0.0",
-    "progress-bar-webpack-plugin": "^1.11.0",
+    "progress-bar-webpack-plugin": "^1.12.1",
     "style-loader": "^0.23.1",
-    "terser-webpack-plugin": "^1.2.1",
-    "webpack": "^4.12.0",
-    "webpack-cli": "^3.0.7",
-    "webpack-dev-middleware": "^3.2.0",
+    "terser-webpack-plugin": "^1.3.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-middleware": "^3.7.0",
     "webpack-glsl-loader": "^1.0.1",
     "webpack-merge": "^4.1.3"
   },
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.17.1"
   }
 }
