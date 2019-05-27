@@ -63,4 +63,10 @@ module.exports = {
             chunksSortMode: "dependency",
         }),
     ],
+    resolve: {
+        alias: {
+            modules: path.resolve("src/modules"),
+            vendors: path.resolve("src/vendors"),
+        },
+    },
 };
