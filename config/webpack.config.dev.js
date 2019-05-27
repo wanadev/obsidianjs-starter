@@ -2,7 +2,7 @@ const merge = require("webpack-merge");
 const path = require("path");
 
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
-//const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
+// const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 
 const common = require("./webpack.common.js");
 
@@ -26,7 +26,7 @@ module.exports = merge(common, {
                 ],
             },
         }),
-        //new HardSourceWebpackPlugin(),
+        // new HardSourceWebpackPlugin(),
         // No hardsource plugin because of errors with last Webpack version :
         // https://github.com/webpack/webpack/issues/8052
     ],
