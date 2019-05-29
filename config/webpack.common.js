@@ -7,9 +7,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ROOT_DIR = path.resolve(__dirname, "../");
 
 module.exports = {
-    entry: {
-        home: path.join(ROOT_DIR, "src/index.js"),
-    },
+    entry: [
+        path.join(ROOT_DIR, "src/index.js"),
+    ],
     target: "web",
     module: {
         rules: [
