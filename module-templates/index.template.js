@@ -4,8 +4,8 @@ export default {
     requires: [],
 
     load() {
-        const {{camelCase name}} = require("./src/{{dashCase name}}.js").default;  // eslint-disable-line global-require
-        return new {{camelCase name}}();
+        const {{pascalCase name}} = require("./src/{{dashCase name}}.js").default;  // eslint-disable-line global-require
+        return new {{pascalCase name}}();
     },
 
     unload() {},
