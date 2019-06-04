@@ -15,7 +15,10 @@
     "plop": "plop"
   },
   "jest": {
-    "testPathIgnorePatterns": ["/node_modules/", "/module-templates/"]
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/module-templates/"
+    ]
   },
   "husky": {
     "hooks": {
