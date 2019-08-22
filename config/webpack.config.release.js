@@ -40,6 +40,12 @@ module.exports = merge(common, {
                 cache: true,
                 parallel: true,
                 sourceMap: true,
+                terserOptions: {
+                    // annotations are needed to make the obsidian api work
+                    compress: {
+                        directives: false,
+                    },
+                },
             }),
         ],
     },
