@@ -5,7 +5,7 @@ This is a boilerplate for the [ObsidianJS framework](https://github.com/wanadev/
 
 ## Available Commands
 
-dev:
+Dev:
 
 * `npm run dev` - build the project and run the development server with watch and autoreload
 * `npm run lint` - run linting on the project's code
@@ -78,7 +78,7 @@ Then edit the `package.json` file to put your project's name and version in it:
   ...
 ```
 
-```javasript
+```javascript
 const app = obsidian("my-project");
 ```
 
