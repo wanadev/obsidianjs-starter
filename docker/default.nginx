@@ -1,0 +1,23 @@
+server {
+    listen 80 default_server;
+
+    # Obsidian static assets
+    location ~ ^/(assets/|images/|js/|locales/|style/|fonts/|index.html$|$) {
+        root /obsidian/app;
+        expires 12h;
+        add_header Cache-Control "public";
+    }
+
+    # Obsidian Node server
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+}
+
+# vim:ft=nginx

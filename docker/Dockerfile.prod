@@ -1,0 +1,30 @@
+# Builder image
+
+FROM node:16 as builder
+
+COPY ./ /build
+
+RUN cd /build \
+    && npm install --also=dev \
+    && npm run release
+
+
+# Obsidian prod image
+
+FROM debian:latest
+
+ENV NODE_ENV production
+ENV PORT 8080
+ENV APP_DIR /obsidian/app
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update -y \
+    && apt-get install -y nodejs npm nginx \
+    && npm install -g pm2
+
+COPY --from=builder /build/build/release /obsidian
+COPY ./docker/default.nginx /etc/nginx/sites-enabled/default
+COPY ./docker/run-prod.sh /
+
+EXPOSE 80
+CMD ["bash", "/run-prod.sh"]
