@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server",
     "dev": "cross-env NODE_ENV=dev node server",
-    "release": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.release.js && cp -r server build/release && cp package.json build/release",
+    "release": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.release.js && cp -r server build/release && cp package.json build/release && cd build/release && npm install --only=prod --ignore-scripts",
     "lint": "eslint src config server",
     "lint-fix": "eslint src config server --fix",
     "test": "echo \"tests: todo !\""
@@ -41,7 +41,6 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-import-resolver-webpack": "^0.10.1",
     "eslint-plugin-import": "^2.12.0",
-    "favicons-webpack-plugin": "0.0.9",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "hard-source-webpack-plugin": "^0.13.1",
     "html-webpack-plugin": "^3.2.0",

@@ -1,0 +1,11 @@
+version: "3.4"
+
+services:
+    obsidian-dev:
+        build:
+            context: ./
+            dockerfile: ./docker/Dockerfile.dev
+        volumes:
+            - ./:/obsidian
+        ports:
+            - "8080:8080"

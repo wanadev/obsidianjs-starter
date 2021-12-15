@@ -1,0 +1,12 @@
+# Obsidian dev image
+
+FROM node:16
+
+ENV NODE_ENV dev
+ENV PORT 8080
+
+COPY ./docker/run-dev.sh /
+
+EXPOSE 8080
+WORKDIR /obsidian
+CMD ["bash", "/run-dev.sh"]
