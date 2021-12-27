@@ -29,7 +29,7 @@
     "@babel/core": "^7.2.2",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.2.0",
-    "@obsidianjs/obsidian": "^0.1.2",
+    "@obsidianjs/obsidian": "^0.3.0",
     "autoprefixer": "^9.1.2",
     "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^1.0.0",
