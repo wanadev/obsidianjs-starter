@@ -1,5 +1,5 @@
 const webpack = require("webpack");
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const path = require("path");
 
 const TerserWebpackPlugin = require("terser-webpack-plugin");
@@ -7,7 +7,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const ProgressBarWebpackPlugin = require("progress-bar-webpack-plugin");
 
-const common = require("./webpack.common.js");
+const common = require("./webpack.common");
 
 const ROOT_DIR = path.resolve(__dirname, "../");
 const BUILD_DIRNAME = "build/release";

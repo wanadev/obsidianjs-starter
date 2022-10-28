@@ -1,12 +1,12 @@
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const path = require("path");
 
 const webpack = require("webpack");
 
-const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
+const FriendlyErrorsWebpackPlugin = require("@soda/friendly-errors-webpack-plugin");
 // const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 
-const common = require("./webpack.common.js");
+const common = require("./webpack.common");
 
 const ROOT_DIR = path.resolve(__dirname, "../");
 const DIST_DIR = path.resolve(ROOT_DIR, "build/dev");

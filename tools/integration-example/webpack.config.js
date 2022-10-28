@@ -23,6 +23,18 @@ module.exports = {
                 test: /\.css$/,
                 use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader"],
             },
+            {
+                test: /\.less$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader", "postcss-loader"],
+            },
+            {
+                test: /\.glsl$/,
+                use: [
+                    {
+                        loader: "webpack-glsl-loader",
+                    },
+                ],
+            },
         ],
     },
     plugins: [
