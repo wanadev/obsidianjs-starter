@@ -1,9 +1,8 @@
-const webpack = require("webpack");
 const { merge } = require("webpack-merge");
 const path = require("path");
 
 const TerserWebpackPlugin = require("terser-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const ProgressBarWebpackPlugin = require("progress-bar-webpack-plugin");
 
@@ -52,8 +51,7 @@ module.exports = merge(common, {
         new ProgressBarWebpackPlugin({
             clear: false,
         }),
-        new CleanWebpackPlugin([BUILD_DIRNAME], { root: ROOT_DIR }),
-        new webpack.optimize.OccurrenceOrderPlugin(),
+        new CleanWebpackPlugin(),
         new CompressionWebpackPlugin({
             filename: "[path].gz[query]",
             algorithm: "gzip",
