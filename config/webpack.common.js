@@ -62,7 +62,6 @@ module.exports = {
             template: "src/index.html",
             inject: true,
             sourceMap: true,
-            chunksSortMode: "dependency",
         }),
     ],
     resolve: {

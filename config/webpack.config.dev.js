@@ -18,7 +18,7 @@ module.exports = merge(common, {
         "webpack-hot-middleware/client?reload=true",
     ],
     mode: "development",
-    devtool: "cheap-eval-source-map",
+    devtool: "eval-source-map",
     output: {
         path: DIST_DIR,
         filename: "bundle.js",
