@@ -4,7 +4,6 @@ const path = require("path");
 const webpack = require("webpack");
 
 const FriendlyErrorsWebpackPlugin = require("@soda/friendly-errors-webpack-plugin");
-// const HardSourceWebpackPlugin = require("hard-source-webpack-plugin");
 
 const common = require("./webpack.common");
 

@@ -53,7 +53,6 @@ module.exports = {
                 {
                     from: "*/assets/**/*",
                     to: "assets/modules/[1]/[2]",
-                    // test: /.*src[\\/]modules[\\/]([^\\/]*)[\\/]assets[\\/](.+)$/,
                     context: "src/modules",
                 },
             ],
