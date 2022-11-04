@@ -1,9 +1,8 @@
-const webpack = require("webpack");
-const merge = require("webpack-merge");
 const path = require("path");
 
+const { merge } = require("webpack-merge");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const ProgressBarWebpackPlugin = require("progress-bar-webpack-plugin");
 
@@ -36,9 +35,7 @@ module.exports = merge(common, {
         },
         minimizer: [
             new TerserWebpackPlugin({
-                cache: true,
                 parallel: true,
-                sourceMap: true,
                 terserOptions: {
                     // annotations are needed to make the obsidian api work
                     compress: {
@@ -52,13 +49,12 @@ module.exports = merge(common, {
         new ProgressBarWebpackPlugin({
             clear: false,
         }),
-        new CleanWebpackPlugin([BUILD_DIRNAME], { root: ROOT_DIR }),
-        new webpack.optimize.OccurrenceOrderPlugin(),
+        new CleanWebpackPlugin(),
         new CompressionWebpackPlugin({
-            filename: "[path].gz[query]",
+            filename: "[file].gz[query]",
             algorithm: "gzip",
             test: new RegExp("\\.(js|css)$"),
-            threshold: 10240,
+            threshold: 1024 * 10,
             minRatio: 0.8,
         }),
     ],

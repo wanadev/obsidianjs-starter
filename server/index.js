@@ -9,5 +9,5 @@ if (NODE_ENV === "dev") {
     require("./webpack")(app);
 }
 
-console.log(`Starting Obsidian static server on 0.0.0.0:${PORT} [${NODE_ENV}]`);
+console.log(`Starting Obsidian static server on 0.0.0.0:${PORT} [${NODE_ENV}]`);  // eslint-disable-line no-console
 app.listen(PORT);
