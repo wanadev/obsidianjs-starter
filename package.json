@@ -8,8 +8,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node server",
-    "dev": "cross-env NODE_ENV=dev NODE_OPTIONS=--openssl-legacy-provider node server",
-    "release": "cross-env NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider webpack --config ./config/webpack.config.release.js && cp -r server build/release && cp package.json build/release && cd build/release && npm install --only=prod --ignore-scripts",
+    "dev": "cross-env NODE_ENV=dev node server",
+    "release": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.release.js && cp -r server build/release && cp package.json build/release && cd build/release && npm install --only=prod --ignore-scripts",
     "lint": "eslint src config server",
     "lint-fix": "eslint src config server --fix",
     "test": "echo \"tests: todo !\""
